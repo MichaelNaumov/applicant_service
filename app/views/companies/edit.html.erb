@@ -1,0 +1,8 @@
+<h1>Reclaim company</h1>
+<%= form_for @company do |f| %>
+	<%= render partial: "form", locals: {f: f} %>
+	<br><br>
+	<%= f.submit "Reclaim" %>
+	<%= link_to "Remove company", company_path(@company),
+	method: :delete, data: { confirm: "Are you sure?" }%>
+<% end %>

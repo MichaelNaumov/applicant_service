@@ -1,0 +1,21 @@
+<section>
+<h1>All jobs</h1>
+<p> Сортировка:
+	<%= link_to "Z-A", company_jobs_path(order: "desc") %> |
+	<%= link_to "A-Z", company_jobs_path(order: "asc") %>
+</p>
+<ul>
+	<% @jobs.each do |i| %>
+	<li>
+		<%= link_to i.name, i %>
+				<br/>		
+	 	<%= link_to 'Edit', edit_job_path(i) %>	  
+	  	<%= link_to 'Destroy', job_path(i), method: :delete,
+	  	data: { confirm: 'Are you sure?' } %>
+	</li>
+	<% end %>
+
+</ul>
+
+</section>
+<%= will_paginate @job %>

@@ -1,0 +1,9 @@
+<h1>Reclaim vacancy</h1>
+<%= form_for @job do |f| %>
+	<%= render partial: "form", locals: {f: f} %>
+	<br><br>
+	<%= f.submit "Reclaim" %>
+	<%= link_to "Remove vacancy", job_path(@job),
+	method: :delete, data: { confirm: "Are you sure?" }
+	%>
+<% end %>
