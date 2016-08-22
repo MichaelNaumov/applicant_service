@@ -7,11 +7,14 @@
 <ul>
 	<% @jobs.each do |i| %>
 	<li>
-		<%= link_to i.name, i %>
+		<%= link_to i.name, i %> 
+		<%= link_to 'Submit resume', new_job_resume_path(i) %>
 				<br/>		
 	 	<%= link_to 'Edit', edit_job_path(i) %>	  
+
 	  	<%= link_to 'Destroy', job_path(i), method: :delete,
 	  	data: { confirm: 'Are you sure?' } %>
+
 	</li>
 	<% end %>
 

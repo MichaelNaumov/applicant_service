@@ -7,7 +7,6 @@ class CreateJobs < ActiveRecord::Migration
       t.text :description
       t.string :category  
       t.datetime :deadline
-      #t.integer :company_id
     end
   end
 end

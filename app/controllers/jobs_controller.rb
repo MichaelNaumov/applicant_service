@@ -13,8 +13,7 @@ class JobsController < ApplicationController
 	end
 
 	def show		
-		@job = Job.find(params[:company])
-		render_template(:file => "#{Rails.root}/public/404.html") unless @job.company_id == params[:company_id]
+		@job = Job.find(params[:id])
 	end
 
 	def new

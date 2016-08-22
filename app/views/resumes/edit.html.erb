@@ -1,0 +1,9 @@
+<h1>Reclaim resume</h1>
+<%= form_for @resume do |f| %>
+	<%= render partial: "form", locals: {f: f} %>
+	<br><br>
+	<%= f.submit "Reclaim resume" %>
+	<%= link_to "Remove resume", resume_path(@resume),
+	method: :delete, data: { confirm: "Are you sure?" }
+	%>
+<% end %>

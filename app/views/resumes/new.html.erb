@@ -1,0 +1,6 @@
+<h1>New resume</h1>
+<%= form_for @resume do |f| %>
+	<%= render partial: "form", locals: {f: f} %>
+	<br><br>
+	<%= f.submit "Submit resume" %>
+<% end %>

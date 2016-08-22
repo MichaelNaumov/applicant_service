@@ -1,0 +1,18 @@
+<section>
+<h1>All resumes</h1>
+
+<ul>
+	<% @resumes.each do |i| %>
+	<li>
+				<br/>		
+	 	<%= link_to 'Edit', edit_resume_path(i) %>	  
+
+	  	<%= link_to 'Destroy', resume_path(i), method: :delete,
+	  	data: { confirm: 'Are you sure?' } %>
+
+	</li>
+	<% end %>
+</ul>
+
+</section>
+<%= will_paginate @job %>
